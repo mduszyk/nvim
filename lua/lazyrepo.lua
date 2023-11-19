@@ -7,9 +7,8 @@ local M = {
 function M.clone()
     if not vim.loop.fs_stat(M.path) then
         local util = require("util")
-        print("Clonning lazy.nvim to " .. M.path)
         cmd = { "git", "clone", "--filter=blob:none", "--branch=" .. M.branch, M.url, M.path }
-        util.shell_call(cmd) 
+        util.shell(cmd) 
     end
     vim.opt.rtp:prepend(M.path)
 end
