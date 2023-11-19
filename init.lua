@@ -1,6 +1,5 @@
 require("lazyrepo").clone()
-local plugins = require("plugins")
-require("lazy").setup(plugins)
+require("lazy").setup(require("plugins"))
 
 vim.g.mapleader = " "
 local mappings = require("mappings")
