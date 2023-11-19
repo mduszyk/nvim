@@ -23,4 +23,11 @@ local mappings = {
     }
 }
 
+function mappings.register()
+    local wk = require("which-key") 
+    wk.register(mappings["n"], {mode = "n"})
+    wk.register(mappings["i"], {mode = "i"})
+    wk.register(mappings["v"], {mode = "v"})
+end
+
 return mappings
