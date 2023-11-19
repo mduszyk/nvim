@@ -20,6 +20,13 @@ local plugins = {
             -- or leave it empty to use the default settings
             -- refer to the configuration section below
         }
+    },
+    {
+        "nvim-telescope/telescope.nvim",
+        branch = '0.1.x',
+        dependencies = {
+            "nvim-lua/plenary.nvim"
+        }
     }
 }
 
