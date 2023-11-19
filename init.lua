@@ -15,5 +15,5 @@ vim.opt.number = true
 
 -- margin
 vim.opt.colorcolumn = "100"
-vim.cmd [[highlight ColorColumn ctermbg=DarkGray guibg=DarkGray]]
+vim.cmd([[highlight ColorColumn ctermbg=DarkGray guibg=DarkGray]])
 
