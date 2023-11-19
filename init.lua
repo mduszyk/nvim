@@ -1,7 +1,6 @@
-require("lazy_install")
+require("lazy_init").install()
 local plugins = require("plugins")
-local lazy = require("lazy")
-lazy.setup(plugins)
+require("lazy").setup(plugins)
 
 vim.g.mapleader = " "
 local mappings = require("mappings")

@@ -19,7 +19,5 @@ function M.install()
     vim.opt.rtp:prepend(M.path)
 end
 
-M.install()
-
 return M
 
