@@ -1,4 +1,4 @@
-require("lazy_init").install()
+require("lazyrepo").clone()
 local plugins = require("plugins")
 require("lazy").setup(plugins)
 

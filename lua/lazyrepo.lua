@@ -4,7 +4,7 @@ local M = {
     path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 }
 
-function M.install()
+function M.clone()
     if not vim.loop.fs_stat(M.path) then
         print("Clonning lazy.nvim to " .. M.path)
         util.shell_call {
