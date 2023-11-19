@@ -6,7 +6,7 @@ lazy.setup(plugins)
 vim.g.mapleader = " "
 local mappings = require("mappings")
 local wk = require("which-key") 
-wk.register(mappings)
+wk.register(mappings, {mode = "n"})
 
 vim.opt.number = true
 --vim.opt.colorcolumn = "80"
