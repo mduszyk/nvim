@@ -15,7 +15,8 @@ local mappings = {
         ["<leader>fb"] = { "<cmd>Telescope buffers<cr>", "Telescope buffers" },
         ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Telescope help tags" },
         ["<leader>u"] = { name = "UI" },
-        ["<leader>un"] = { "<cmd>setlocal number!<cr>", "Toggle line numbering" }
+        ["<leader>un"] = { "<cmd>setlocal number!<cr>", "Toggle line numbering" },
+        ["<leader>t"] = { "<cmd>ToggleTerm<cr>", "Toggle terminal" },
     },
     i = {
         ["<c-s>"] = { "<esc><cmd>update<cr>", "Save" },
