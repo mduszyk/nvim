@@ -1,6 +1,7 @@
 local mappings = {
     n = {
-        ["<esc>"] = { "<cmd>noh<cr><cmd>update<cr>", "Clear highlights and update" },
+        ["<esc>"] = { "<cmd>noh<cr>", "Clear highlights" },
+        ["<c-s>"] = { "<cmd>update<cr>", "Save" },
         ["<tab>"] = { "<c-w>w", "Switch window" },
         ["<leader>n"] = { "<cmd>Neotree toggle<cr>", "Toggle neo tree" },
         ["<leader>b"] = { "<cmd>Neotree buffers toggle<cr>", "Toggle neo tree buffers" },
@@ -15,11 +16,11 @@ local mappings = {
         ["<leader>un"] = { "<cmd>setlocal number!<cr>", "Toggle line numbering" }
     },
     i = {
-        ["<esc>"] = { "<esc><cmd>update<cr>", "Esc and update" },
+        ["<c-s>"] = { "<esc><cmd>update<cr>", "Save" },
 
     },
     v = {
-        ["<esc>"] = { "<esc><cmd>update<cr>", "Esc and update" },
+        ["<c-s>"] = { "<esc><cmd>update<cr>", "Save" },
     }
 }
 
