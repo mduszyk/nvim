@@ -1,5 +1,17 @@
 local plugins = {
     {
+        'navarasu/onedark.nvim',
+        config = function()
+            require('onedark').setup {
+                style = 'darker',
+                code_style = {
+                    comments = 'none',
+                },
+            }
+            require('onedark').load()
+        end
+    },
+    {
         'akinsho/toggleterm.nvim',
         version = "*",
         config = true
