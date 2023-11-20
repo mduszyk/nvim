@@ -11,6 +11,6 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.number = true
-vim.opt.colorcolumn = "100"
-vim.cmd([[highlight ColorColumn ctermbg=DarkGray guibg=DarkGray]])
+-- vim.opt.colorcolumn = "100"
+-- im.cmd([[highlight ColorColumn ctermbg=DarkGray guibg=DarkGray]])
 
