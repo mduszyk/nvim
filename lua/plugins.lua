@@ -87,4 +87,11 @@ local plugins = {
     }
 }
 
-return plugins
+local M = {}
+
+function M.setup()
+    require("lazyrepo").clone()
+    require("lazy").setup(plugins)
+end
+
+return M

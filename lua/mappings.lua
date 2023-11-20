@@ -41,7 +41,7 @@ end
 
 local M = {}
 
-function M.register()
+function M.setup()
     -- local wk = require("which-key") 
     -- wk.register(mappings.n, {mode = "n"})
     -- wk.register(mappings.i, {mode = "i"})

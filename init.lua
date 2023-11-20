@@ -1,6 +1,5 @@
-require("lazyrepo").clone()
-require("lazy").setup(require("plugins"))
-require("mappings").register()
+require("plugins").setup()
+require("mappings").setup()
 
 -- default indentation
 vim.opt.ts = 4
