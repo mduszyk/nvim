@@ -11,12 +11,12 @@ mappings.n = {
     ["<leader>b"] = { "<cmd>Neotree buffers toggle<cr>", "Toggle Neotree buffers" },
     ["<leader>g"] = { "<cmd>Neotree git_status toggle<cr>", "Toggle Neotree git status" },
     -- TODO Neotree document_symbols (requires lsp)
-    ["<leader>f"] = { name = "Telescope" },
+    --["<leader>f"] = { name = "Telescope" },
     ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Telescope find files" },
     ["<leader>fw"] = { "<cmd>Telescope live_grep<cr>", "Telescope grep" },
     ["<leader>fb"] = { "<cmd>Telescope buffers<cr>", "Telescope buffers" },
     ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Telescope help tags" },
-    ["<leader>u"] = { name = "UI" },
+    --["<leader>u"] = { name = "UI" },
     ["<leader>un"] = { "<cmd>setlocal number!<cr>", "Toggle line numbering" },
     ["<leader>t"] = { "<cmd>ToggleTerm<cr>", "Toggle terminal" },
 }
@@ -39,13 +39,22 @@ function _G.set_terminal_keymaps()
     vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 end
 
-function mappings.register()
-    local wk = require("which-key") 
-    wk.register(mappings.n, {mode = "n"})
-    wk.register(mappings.i, {mode = "i"})
-    wk.register(mappings.v, {mode = "v"})
-    wk.register(mappings.t, {mode = "t"})
+local M = {}
+
+function M.register()
+    -- local wk = require("which-key") 
+    -- wk.register(mappings.n, {mode = "n"})
+    -- wk.register(mappings.i, {mode = "i"})
+    -- wk.register(mappings.v, {mode = "v"})
+
+    vim.g.mapleader = " "
+    for mode, maps in pairs(mappings) do
+        for key, map in pairs(maps) do
+            vim.api.nvim_set_keymap(mode, key, map[1], { nowait = true, desc = map[2] })
+        end
+    end
+
     vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 end
 
-return mappings
+return M
