@@ -3,7 +3,7 @@ local mappings = {
         ["<esc>"] = { "<cmd>noh<cr>", "Clear highlights" },
         ["<c-s>"] = { "<cmd>update<cr>", "Save" },
         ["<tab>"] = { "<c-w>w", "Switch window" },
-        ["\\"] = { "<cmd>Neotree reveal<cr>", "Neotree reveal" },
+        ["\\"] = { "<cmd>Neotree reveal<cr>", "Neotree show current file" },
         ["<leader>a"] = { "ggVG", "Select all" },
         ["<leader>q"] = { "<cmd>q<cr>", "Quit" },
         ["<leader>n"] = { "<cmd>Neotree toggle<cr>", "Toggle Neotree" },
@@ -30,6 +30,7 @@ local mappings = {
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
+  -- enter normal mode
   vim.keymap.set('t', '<c-x>', [[<C-\><C-n>]], opts)
   vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
   vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
