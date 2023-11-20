@@ -39,7 +39,7 @@ table.insert(plugins, require("plugins.neotree"))
 local M = {}
 
 function M.setup()
-    require("lazyrepo").clone()
+    require("plugins.lazyrepo").clone()
     require("lazy").setup(plugins)
 end
 
