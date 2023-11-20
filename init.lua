@@ -2,8 +2,6 @@ require("lazyrepo").clone()
 require("lazy").setup(require("plugins"))
 require("mappings").register()
 
-vim.g.mapleader = " "
-
 -- default indentation
 vim.opt.ts = 4
 vim.opt.tabstop = 4
