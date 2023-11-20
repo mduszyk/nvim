@@ -2,13 +2,14 @@ local plugins = {
     {
         'navarasu/onedark.nvim',
         config = function()
-            require('onedark').setup {
+            local onedark = require("onedark")
+            onedark.setup {
                 style = 'darker',
                 code_style = {
                     comments = 'none',
                 },
             }
-            require('onedark').load()
+            onedark.load()
         end
     },
     {
