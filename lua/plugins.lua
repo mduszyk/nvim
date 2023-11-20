@@ -11,7 +11,23 @@ local plugins = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
-        }
+        },
+        config = function ()
+            require("neo-tree").setup({
+                default_component_configs = {
+                    indent = {
+                        with_markers = false
+                    }
+                },
+                window = {
+                    width = 32,
+                    mapping_options = { noremap = true, nowait = true, },
+                    mappings = {
+                        ["o"] = {"open", nowait = true, noremap = true},
+                    }
+                }
+            })
+        end
     },
     {
         "folke/which-key.nvim",

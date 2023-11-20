@@ -3,11 +3,12 @@ local mappings = {
         ["<esc>"] = { "<cmd>noh<cr>", "Clear highlights" },
         ["<c-s>"] = { "<cmd>update<cr>", "Save" },
         ["<tab>"] = { "<c-w>w", "Switch window" },
+        ["\\"] = { "<cmd>Neotree reveal<cr>", "Neotree reveal" },
         ["<leader>a"] = { "ggVG", "Select all" },
         ["<leader>q"] = { "<cmd>q<cr>", "Quit" },
-        ["<leader>n"] = { "<cmd>Neotree toggle<cr>", "Toggle neo tree" },
-        ["<leader>b"] = { "<cmd>Neotree buffers toggle<cr>", "Toggle neo tree buffers" },
-        ["<leader>g"] = { "<cmd>Neotree git_status toggle<cr>", "Toggle neo tree git status" },
+        ["<leader>n"] = { "<cmd>Neotree toggle<cr>", "Toggle Neotree" },
+        ["<leader>b"] = { "<cmd>Neotree buffers toggle<cr>", "Toggle Neotree buffers" },
+        ["<leader>g"] = { "<cmd>Neotree git_status toggle<cr>", "Toggle Neotree git status" },
         -- TODO Neotree document_symbols (requires lsp)
         ["<leader>f"] = { name = "Telescope" },
         ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Telescope find files" },
@@ -29,7 +30,7 @@ local mappings = {
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
-  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', '<c-x>', [[<C-\><C-n>]], opts)
   vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
   vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
   vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
