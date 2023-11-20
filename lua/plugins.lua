@@ -14,6 +14,10 @@ local plugins = {
         },
         config = function ()
             require("neo-tree").setup({
+                sources = { "filesystem", "buffers", "git_status" },
+                source_selector = {
+                    winbar = true,
+                },
                 default_component_configs = {
                     indent = {
                         with_markers = false
@@ -24,6 +28,24 @@ local plugins = {
                     mapping_options = { noremap = true, nowait = true, },
                     mappings = {
                         ["o"] = {"open", nowait = true, noremap = true},
+                    }
+                },
+                filesystem = {
+                    window = {
+                        mappings = {
+                        }
+                    }
+                },
+                buffers = {
+                    window = {
+                        mappings = {
+                        }
+                    }
+                },
+                git_status = {
+                    window = {
+                        mappings = {
+                        }
                     }
                 }
             })
