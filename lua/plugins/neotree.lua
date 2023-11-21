@@ -8,7 +8,7 @@ return {
     },
     config = function ()
         require("neo-tree").setup({
-            sources = { "filesystem", "buffers", "git_status" },
+            sources = { "filesystem", "buffers", "git_status", "document_symbols" },
             source_selector = {
                 winbar = true,
             },

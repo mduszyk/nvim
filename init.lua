@@ -1,5 +1,5 @@
 require("plugins").setup()
-require("mappings").setup()
+require("mappings")
 
 -- default indentation
 vim.opt.ts = 4
