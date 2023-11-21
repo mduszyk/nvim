@@ -1,4 +1,4 @@
-require("plugins").setup()
+require("plugins")
 require("mappings")
 
 -- default indentation
