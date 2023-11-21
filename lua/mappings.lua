@@ -40,14 +40,16 @@ map("v", "<c-s>", "<esc><cmd>update<cr>", {desc="Save"})
 
 -- ToggleTerm
 map("n", "<leader>t", "<cmd>ToggleTerm<cr>", {desc="Toggle terminal"})
-function _G.set_term_keymaps()
-    local opts = {buffer = 0}
-    map("t", "<c-x>", [[<C-\><C-n>]], {buffer = 0, desc = "Enter normal mode"})
-    map("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
-    map("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
-    map("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
-    map("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
-    map("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
-end
-vim.cmd("autocmd! TermOpen term://* lua set_term_keymaps()")
 
+vim.api.nvim_create_autocmd({"TermOpen"}, {
+    pattern = {"term://*"},
+    callback = function()
+        map("t", "<c-x>", [[<C-\><C-n>]], {buffer = 0, desc = "Enter normal mode"})
+        local opts = {buffer = 0}
+        map("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+        map("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+        map("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+        map("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
+        map("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
+    end
+})
