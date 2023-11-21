@@ -3,6 +3,7 @@ require("mappings")
 
 vim.opt.number = true
 vim.opt.clipboard = "unnamedplus"
+
 -- default indentation
 vim.opt.ts = 4
 vim.opt.tabstop = 4
