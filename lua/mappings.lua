@@ -7,8 +7,8 @@ map("n", "<esc>", "<cmd>noh<cr>", {desc="Clear highlights"})
 map("n", "<c-s>", "<cmd>update<cr>", {desc="Save"})
 map("n", "<tab>", "<c-w>w", {desc="Switch window"})
 map("n", "\\", "<cmd>Neotree reveal<cr>", {desc="Neotree show current file"})
-map("n", "<leader>a", "ggVG", {desc="Select all" })
-map("n", "<leader>q", "<cmd>q<cr>", {desc="Quit" })
+map("n", "<leader>a", "ggVG", {desc="Select all"})
+map("n", "<leader>q", "<cmd>q<cr>", {desc="Quit"})
 
 -- Neotree
 map("n", "<leader>n", "<cmd>Neotree toggle<cr>", {desc="Toggle Neotree"})
