@@ -1,5 +1,15 @@
 return {
     {
+        "numToStr/Comment.nvim",
+        -- keys = {
+        --     { "gc", mode = { "n", "v" }, desc = "Comment toggle linewise" },
+        --     { "gb", mode = { "n", "v" }, desc = "Comment toggle blockwise" },
+        -- },
+        config = function(_, opts)
+            require("Comment").setup(opts)
+        end,
+    },
+    {
         "github/copilot.vim",
         event = "InsertEnter",
         config = function()
