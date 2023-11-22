@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.opt.timeoutlen=1000
 
 local map = vim.keymap.set
 
