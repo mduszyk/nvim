@@ -33,6 +33,27 @@ return {
                 capabilities = capabilities,
                 filetypes = { "python" }
             }
+            lspconfig.lua_ls.setup{
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        runtime = {
+                            version = 'LuaJIT'
+                        },
+                        diagnostics = {
+                            globals = { 'vim' },
+                        },
+                        telemetry = {
+                            enable = false,
+                        },
+                        workspace = {
+                            library = {
+                                [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                            }
+                        }
+                    },
+                }
+            }
         end
     },
     {
