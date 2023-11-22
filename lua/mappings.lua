@@ -16,6 +16,9 @@ map("n", "<leader>q", "<cmd>q<cr>", {desc="Quit"})
 map("n", "<leader>i", util.toggle_diagnostics, {desc="Diagnostics Toggle"})
 map("n", "<leader>c", util.toggle_copilot, {desc="Diagnostics Toggle"})
 
+map("n", "<c-j>", "<c-e>", {desc="Scroll down"})
+map("n", "<c-k>",  "<c-y>", {desc="Scroll up"})
+
 -- Neotree
 map("n", "<leader>n", "<cmd>Neotree toggle<cr>", {desc="Toggle Neotree"})
 map("n", "<leader>b", "<cmd>Neotree buffers toggle<cr>", {desc="Toggle Neotree buffers"})
@@ -38,8 +41,8 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "Code Action"})
 map("n", "K", vim.lsp.buf.hover, {desc = "Hover Documentation"})
 map("n", "<leader>F", vim.lsp.buf.format, {desc = "Format Code"})
 
-vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
-vim.api.nvim_set_keymap('i', '<C-k>', 'copilot#Next()', {expr=true, silent=true})
+vim.api.nvim_set_keymap('i', '<c-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
+vim.api.nvim_set_keymap('i', '<c-k>', 'copilot#Next()', {expr=true, silent=true})
 
 -- INPUT
 map("i", "<c-s>", "<esc><cmd>update<cr>", {desc="Save"})

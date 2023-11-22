@@ -69,7 +69,7 @@ return {
                     ["?"] = "show_help",
                     ["<"] = "prev_source",
                     [">"] = "next_source",
-                    -- ["<space>"] = { "toggle_node", nowait = false },
+                    ["+"] = { "toggle_node", nowait = false },
                     -- ["z"] = "close_all_nodes",
                     -- ["Z"] = "expand_all_nodes",
                     -- ["S"] = "split_with_window_picker",
