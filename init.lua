@@ -3,6 +3,8 @@ require("mappings")
 
 vim.opt.number = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.nuw = 3
+vim.opt.signcolumn = "yes"
 
 -- default indentation
 vim.opt.ts = 4

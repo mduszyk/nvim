@@ -33,6 +33,9 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "Code Action"})
 map("n", "K", vim.lsp.buf.hover, {desc = "Hover Documentation"})
 map("n", "<leader>F", vim.lsp.buf.format, {desc = "Format Code"})
 
+vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
+vim.api.nvim_set_keymap('i', '<C-k>', 'copilot#Next()', {expr=true, silent=true})
+
 -- INPUT
 map("i", "<c-s>", "<esc><cmd>update<cr>", {desc="Save"})
 
