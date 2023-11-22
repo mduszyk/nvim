@@ -20,6 +20,7 @@ return {
                     "vimdoc",
                     "bash",
                     "python",
+                    "markdown",
                 },
                 highlight = {
                     enable = true,
