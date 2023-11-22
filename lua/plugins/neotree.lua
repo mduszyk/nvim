@@ -8,6 +8,7 @@ return {
     },
     config = function ()
         require("neo-tree").setup({
+            -- see: neo-tree.nvim/lua/neo-tree/defaults.lua
             use_popups_for_input = false,
             popup_border_style = "rounded",
             sources = { "filesystem", "buffers", "git_status", "document_symbols" },
