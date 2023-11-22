@@ -8,6 +8,8 @@ return {
     },
     config = function ()
         require("neo-tree").setup({
+            use_popups_for_input = false,
+            popup_border_style = "rounded",
             sources = { "filesystem", "buffers", "git_status", "document_symbols" },
             source_selector = {
                 winbar = true,
@@ -22,47 +24,38 @@ return {
                 width = 32,
                 mapping_options = { noremap = true, nowait = true, },
                 mappings = {
-                    ["<space>"] = {
-                        "toggle_node",
-                        nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
-                    },
                     ["<2-LeftMouse>"] = "open",
                     ["<cr>"] = "open",
                     ["o"] = "open",
                     ["<esc>"] = "revert_preview",
                     ["P"] = { "toggle_preview", config = { use_float = true } },
                     ["S"] = "open_split",
-                    -- ["S"] = "split_with_window_picker",
                     ["s"] = "open_vsplit",
-                    -- ["s"] = "vsplit_with_window_picker",
                     ["t"] = "open_tabnew",
-                    -- ["<cr>"] = "open_drop",
-                    -- ["t"] = "open_tab_drop",
                     ["w"] = "open_with_window_picker",
                     ["C"] = "close_node",
-                    --["z"] = "close_all_nodes",
-                    --["Z"] = "expand_all_nodes",
                     ["R"] = "refresh",
-                    ["a"] = {
-                        "add",
-                        -- some commands may take optional config options, see `:h neo-tree-mappings` for details
-                        config = {
-                            show_path = "none" -- "none", "relative", "absolute"
-                        }
-                    },
-                    ["A"] = "add_directory", -- also accepts the config.show_path option.
+                    ["a"] = { "add", config = { show_path = "relative" } },
+                    ["c"] = { "copy",  config = { show_path = "relative" } },
+                    ["m"] = { "move", config = { show_path = "relative" } },
+                    ["A"] = { "add_directory", config = { show_path = "relative" } },
                     ["d"] = "delete",
                     ["r"] = "rename",
                     ["y"] = "copy_to_clipboard",
                     ["x"] = "cut_to_clipboard",
                     ["p"] = "paste_from_clipboard",
-                    ["c"] = "copy", -- takes text input for destination, also accepts the config.show_path option
-                    ["m"] = "move", -- takes text input for destination, also accepts the config.show_path option
                     ["e"] = "toggle_auto_expand_width",
                     ["q"] = "close_window",
                     ["?"] = "show_help",
                     ["<"] = "prev_source",
                     [">"] = "next_source",
+                    -- ["<space>"] = { "toggle_node", nowait = false },
+                    -- ["z"] = "close_all_nodes",
+                    -- ["Z"] = "expand_all_nodes",
+                    -- ["S"] = "split_with_window_picker",
+                    -- ["s"] = "vsplit_with_window_picker",
+                    -- ["<cr>"] = "open_drop",
+                    -- ["t"] = "open_tab_drop",
                 }
             },
             filesystem = {
