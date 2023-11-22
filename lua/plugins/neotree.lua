@@ -22,13 +22,16 @@ return {
                 name = {
                     use_git_status_colors = false,
                 },
+                modified = {
+                    symbol = "+ ",
+                },
                 git_status = {
                     symbols = {
                         added     = "+",
                         deleted   = "x",
                         modified  = ".",
                         renamed   = "r",
-                        untracked = "",
+                        untracked = "?",
                         ignored   = "",
                         unstaged  = "",
                         staged    = "",
