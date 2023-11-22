@@ -18,7 +18,23 @@ return {
             default_component_configs = {
                 indent = {
                     with_markers = false
-                }
+                },
+                name = {
+                    use_git_status_colors = false,
+                },
+                git_status = {
+                    symbols = {
+                        added     = "+",
+                        deleted   = "x",
+                        modified  = ".",
+                        renamed   = "r",
+                        untracked = "",
+                        ignored   = "",
+                        unstaged  = "",
+                        staged    = "",
+                        conflict  = "!",
+                    },
+                },
             },
             use_default_mappings = false,
             window = {
