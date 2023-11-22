@@ -1,3 +1,5 @@
+local util = require("util")
+
 vim.g.mapleader = " "
 vim.opt.timeoutlen=1000
 
@@ -10,6 +12,9 @@ map("n", "<tab>", "<c-w>w", {desc="Switch window"})
 map("n", "\\", "<cmd>Neotree reveal<cr>", {desc="Neotree show current file"})
 map("n", "<leader>a", "ggVG", {desc="Select all"})
 map("n", "<leader>q", "<cmd>q<cr>", {desc="Quit"})
+
+map("n", "<leader>i", util.toggle_diagnostics, {desc="Diagnostics Toggle"})
+map("n", "<leader>c", util.toggle_copilot, {desc="Diagnostics Toggle"})
 
 -- Neotree
 map("n", "<leader>n", "<cmd>Neotree toggle<cr>", {desc="Toggle Neotree"})

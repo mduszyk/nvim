@@ -6,4 +6,26 @@ function M.shell(cmd)
     assert(vim.v.shell_error == 0, "Error: " .. vim.v.shell_error .. "\n" .. output)
 end
 
+M.deagnostics_enabled = false
+
+M.toggle_diagnostics = function ()
+  if M.diagnostics_enabled then
+    vim.diagnostic.disable()
+    print("󱙎 Diagnostics disabled")
+  else
+    vim.diagnostic.enable()
+    print("󰍥 Diagnostics enabled")
+  end
+  M.diagnostics_enabled = not M.diagnostics_enabled
+end
+
+M.toggle_copilot = function ()
+  vim.g.copilot_enabled = not vim.g.copilot_enabled
+  if vim.g.copilot_enabled then
+    print(" Copilot enabled")
+  else
+    print(" Copilot disabled")
+  end
+end
+
 return M

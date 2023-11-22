@@ -19,3 +19,5 @@ vim.api.nvim_create_autocmd({"BufRead"}, {
         vim.fn.matchadd('CursorColumn', '\\%101v', 100)
     end
 })
+
+vim.diagnostic.disable()
