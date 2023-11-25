@@ -15,6 +15,7 @@ map("n", "<leader>q", "<cmd>q<cr>", {desc="Quit"})
 
 map("n", "<leader>i", util.toggle_diagnostics, {desc="Diagnostics Toggle"})
 map("n", "<leader>c", util.toggle_copilot, {desc="Diagnostics Toggle"})
+map("n", "<leader>l", "<cmd>setlocal number!<cr>", {desc="Diagnostics Toggle"})
 
 map("n", "<c-j>", "<c-e>", {desc="Scroll down"})
 map("n", "<c-k>",  "<c-y>", {desc="Scroll up"})
