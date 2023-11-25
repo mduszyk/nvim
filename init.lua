@@ -15,6 +15,11 @@ vim.opt.expandtab = true
 vim.opt.spelllang = "en_gb"
 vim.opt.spell = true
 
+vim.opt.confirm = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.fileignorecase = true
+
 -- color 101st column
 vim.api.nvim_create_autocmd({"BufRead"}, {
     pattern = {"*"},
