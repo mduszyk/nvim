@@ -15,7 +15,10 @@ vim.opt.expandtab = true
 vim.opt.spelllang = "en_gb"
 vim.opt.spell = true
 
+-- Instead of failing a command because of unsaved changes, raise a
+-- dialogue asking if you wish to save changed files.
 vim.opt.confirm = true
+-- use case insensitive search, except when using capital letters
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.fileignorecase = true
