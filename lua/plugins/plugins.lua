@@ -92,6 +92,7 @@ return {
             local onedark = require("onedark")
             onedark.setup {
                 style = 'darker',
+                transparent = true,
                 code_style = {
                     comments = 'none',
                 },
