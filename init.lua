@@ -1,4 +1,5 @@
-require("plugins")
+require("lazyrepo").clone()
+require("lazy").setup(require("plugins"))
 require("mappings")
 
 vim.opt.number = true
