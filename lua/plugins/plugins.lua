@@ -45,6 +45,14 @@ return {
         end
     },
     {
+        "williamboman/mason-lspconfig.nvim",
+        config = function()
+            require("mason-lspconfig").setup{
+                ensure_installed = {"pyright", "lua_ls"},
+            }
+        end
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function()
             local capabilities = vim.lsp.protocol.make_client_capabilities()
