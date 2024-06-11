@@ -33,3 +33,7 @@ vim.api.nvim_create_autocmd({"BufRead"}, {
 })
 
 vim.diagnostic.disable()
+
+vim.o.title = true
+vim.o.titlestring = "nvim %F"
+
