@@ -24,11 +24,11 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.fileignorecase = true
 
--- color 101st column
+-- color 81st column
 vim.api.nvim_create_autocmd({"BufRead"}, {
     pattern = {"*"},
     callback = function()
-        vim.fn.matchadd('CursorColumn', '\\%101v', 100)
+        vim.fn.matchadd('CursorColumn', '\\%81v', 80)
     end
 })
 
