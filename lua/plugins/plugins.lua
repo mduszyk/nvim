@@ -1,5 +1,24 @@
 return {
     {
+      "lervag/vimtex",
+      -- lazy-loading will disable inverse search
+      lazy = false,
+      config = function()
+          -- vim.g.vimtex_view_method = 'zathura'  -- or your preferred PDF viewer
+          vim.g.vimtex_compiler_method = 'latexmk'
+          vim.g.tex_flavor = 'latex'
+          -- vim.cmd [[
+          --     augroup markdown_vimtex
+          --         autocmd!
+          --         autocmd BufRead,BufNewFile *.md set filetype=markdown
+          --         autocmd FileType markdown syn region texMath start=+\$\$+ end=+\$\$+ keepend contains=texStatement
+          --         autocmd FileType markdown syn region texMath start=+\$+ end=+\$+ keepend contains=texStatement
+          --         autocmd FileType markdown setlocal spell
+          --     augroup END
+          -- ]]
+      end
+    },
+    {
         "numToStr/Comment.nvim",
         -- keys = {
         --     { "gc", mode = { "n", "v" }, desc = "Comment toggle linewise" },
@@ -31,9 +50,12 @@ return {
                     "bash",
                     "python",
                     "markdown",
+                    -- "bibtex",
+                    -- "latex",
                 },
                 highlight = {
                     enable = true,
+                    additional_vim_regex_highlighting = { "markdown" },
                 }
             }
         end

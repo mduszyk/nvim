@@ -13,9 +13,9 @@ map("n", "\\", "<cmd>Neotree reveal<cr>", {desc="Neotree show current file"})
 map("n", "<leader>a", "ggVG", {desc="Select all"})
 map("n", "<leader>q", "<cmd>q<cr>", {desc="Quit"})
 
-map("n", "<leader>i", util.toggle_diagnostics, {desc="Diagnostics Toggle"})
-map("n", "<leader>c", util.toggle_copilot, {desc="Diagnostics Toggle"})
-map("n", "<leader>l", "<cmd>setlocal number!<cr>", {desc="Diagnostics Toggle"})
+map("n", "<leader>i", util.toggle_diagnostics, {desc="Toggle Diagnostics"})
+map("n", "<leader>c", util.toggle_copilot, {desc="Toggle Copilot"})
+map("n", "<leader>l", "<cmd>setlocal number!<cr>", {desc="Toggle line numbering"})
 
 map("n", "<c-j>", "<c-e>", {desc="Scroll down"})
 map("n", "<c-k>",  "<c-y>", {desc="Scroll up"})
@@ -27,13 +27,12 @@ map("n", "<leader>g", "<cmd>Neotree git_status toggle<cr>", {desc="Toggle Neotre
 map("n", "<leader>s", "<cmd>Neotree document_symbols toggle<cr>", {desc="Symbols"})
 
 -- Telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", {desc="Telescope find files"})
-map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", {desc="Telescope grep"})
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", {desc="Telescope buffers"})
-map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", {desc="Telescope help tags"})
-
--- UI
-map("n", "<leader>un", "<cmd>setlocal number!<cr>", {desc="Toggle line numbering"})
+-- map("n", "<leader>f", "<cmd>Telescope find_files<cr>", {desc="Telescope find files"})
+map("n", "<leader>f", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>", {desc="Telescope find files"})
+map("n", "<leader>w", "<cmd>Telescope live_grep<cr>", {desc="Telescope grep"})
+map("n", "<leader>h", "<cmd>Telescope help_tags<cr>", {desc="Telescope help tags"})
+map("n", "<leader>B", "<cmd>Telescope buffers<cr>", {desc="Telescope buffers"})
+map("n", "<leader>G", "<cmd>Telescope git_commits<cr>", {desc="Telescope git commits"})
 
 -- LSP
 map("n", "<leader>rn", vim.lsp.buf.rename, {desc = "Rename Symbol"})
