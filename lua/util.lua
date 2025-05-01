@@ -10,10 +10,10 @@ M.deagnostics_enabled = false
 
 M.toggle_diagnostics = function ()
   if M.diagnostics_enabled then
-    vim.diagnostic.disable()
+    vim.diagnostic.enable(false)
     print("󱙎 Diagnostics disabled")
   else
-    vim.diagnostic.enable()
+    vim.diagnostic.enable(true)
     print("󰍥 Diagnostics enabled")
   end
   M.diagnostics_enabled = not M.diagnostics_enabled
