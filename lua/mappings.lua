@@ -28,6 +28,7 @@ map("n", "<leader>s", "<cmd>Neotree document_symbols toggle<cr>", {desc="Symbols
 
 -- Telescope
 -- map("n", "<leader>f", "<cmd>Telescope find_files<cr>", {desc="Telescope find files"})
+-- sudo pacman -S ripgrep
 map("n", "<leader>f", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>", {desc="Telescope find files"})
 map("n", "<leader>w", "<cmd>Telescope live_grep<cr>", {desc="Telescope grep"})
 map("n", "<leader>h", "<cmd>Telescope help_tags<cr>", {desc="Telescope help tags"})
