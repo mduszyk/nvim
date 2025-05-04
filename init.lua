@@ -39,7 +39,7 @@ vim.o.title = true
 vim.o.titlestring = "nvim %F"
 
 -- Source the project-specific init
-local project_setup_file = vim.fn.getcwd() .. "/.nvim/init.lua"
+local project_setup_file = vim.fn.getcwd() .. "/nvim.lua"
 if vim.fn.filereadable(project_setup_file) == 1 then
     dofile(project_setup_file)  
 end
